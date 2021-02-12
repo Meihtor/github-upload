@@ -1,0 +1,77 @@
+//Comandos comúnes
+
+git init    (se utiliza una sóla vez y es para iniciar el proyecto) 
+
+git add index.hmtl     (con este comando le decimos a git a que archivo(s) darle seguimiento)
+
+git add .   (para darle seguimieto a todos los archivos de la carpeta)
+
+git commit     (existen dos apartados en dónde se van a estar alojando los archivos: el área de ensayo, y el repositorio local, que es cómo que el principal, y con ese comando le decimos que el archivo se vaya del área de ensayo al repositorio local
+
+git status -s     (nos indica cuales y cuantos archivos tenemos en la carpeta raíz)
+
+git commit -m "Descripción de ejemplo"      (Para hacer una instantanea y darle una descripción de lo que estamos haciendo en ese momento, un ejemplo puede ser "estilos al header"  )
+
+git log --oneline     (nos da un listado de todas las copias que hay en el repositorio)
+
+git reset --hard e9be23c     (para restaurar el archivo a uno anterior, en ese caso al que lleva el número de e9be23c )
+
+git commit -am "Descripción de ejemplo"     (Este es un shorthand de "commit -m" y "add"
+
+git commit --amend      (Para abrir el editor vim y poder editar algún commit"  )
+
+git push      (Al ejecutar el comando git push estaremos subiendo todos los cambios locales al servidor remoto de github)
+
+SAH1     (Es el id de cada commit realizado)
+
+git count-objects   (Dato de plomería para contar los objetos/archivos y el peso) 
+
+git pull      (Cuando realizamos cambios directamente en github pero no de forma local, es esencial realizar un pull, donde descargaremos los cambios realizados para seguir trabajando normalmente.)  (un ejemplo podría ser un README.md que hayamos creado directamente en github)
+
+git fetch    (Este comando hace la comparación de nuestros archivos locales con los del servidor, si existiera alguna diferencia nos pediría realizar un get pull para realizar un match de nuestros arhivos locales.)
+
+git reset   (revierte los cambios moviendo una referencia de rama hacia atrás en el tiempo a una confirmación anterior. En este sentido, puede pensar en ello como "reescribir la historia"; git resetmoverá una rama hacia atrás como si la confirmación nunca se hubiera realizado en primer lugar.)
+
+git revert   (git reset funciona de manera local, pero si estás compratiendo el proyecto con otros, para que los otros vean los cambios del resetear o revertir el commit hay que usar git revert
+
+git cherry-pick   (Es una forma muy sencilla de decir que le gustaría copiar una serie de confirmaciones debajo de su ubicación actual ( HEAD) )
+
+git rebase -i main~4    (abre una ventana interactiva para acomodar commmits)
+
+
+  
+//tags
+
+Con los tags podemos hacer versiones de nuestro proyecto.
+
+git tag versionAlpha -m "versión alpha"  (crear un tag)
+
+git tag  (listar tags)
+
+git tag -d nombreTags    (borrar tags)
+
+git tag -a nombreTag f52f3da -m "version alpha"   (Hacer una versión en un commit anterior ej: f52f3da)
+
+git show nombreTag   (Mostrar información del tag)
+
+git push --tags   (Para subir los tags de forma manual a github)
+
+
+
+// Ramas o branch
+
+git branch nombreRama   (Crea una nueva rama)
+
+git branch   (Nos muestra en que rama estamos)
+
+git checkout nombreRama   (Nos movemos a la nueva rama)
+
+Podemos unir la rama master con la nueva, para eso tenemos que estar en la master para ejecutar el siguiente comando:
+
+git merge nombreRama    (Nos movemos a la nueva rama)
+
+git branch -d nombreRama   (Eliminar una rama)
+
+
+
+
